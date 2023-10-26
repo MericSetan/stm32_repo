@@ -20,6 +20,7 @@
 #include "main.h"
 #include <stdint.h>
 #include "user_led.h"
+#include "user_button.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -78,6 +79,7 @@ int main(void)
 
   /* USER CODE BEGIN Init */
   user_led_init();
+  user_button_init();
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -111,8 +113,13 @@ int main(void)
 	user_led_off(15);
 	HAL_Delay(500);
 	*/
-	user_led_toggle(red_led);
-	HAL_Delay(500);
+	if(user_button_get_state()){
+		user_led_on(red_led);
+	}else{
+		user_led_off(red_led);
+	}
+	HAL_Delay(100);
+
 
   }
   /* USER CODE END 3 */

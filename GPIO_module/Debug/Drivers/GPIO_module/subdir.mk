@@ -5,12 +5,15 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Drivers/GPIO_module/user_button.c \
 ../Drivers/GPIO_module/user_led.c 
 
 OBJS += \
+./Drivers/GPIO_module/user_button.o \
 ./Drivers/GPIO_module/user_led.o 
 
 C_DEPS += \
+./Drivers/GPIO_module/user_button.d \
 ./Drivers/GPIO_module/user_led.d 
 
 
@@ -21,7 +24,7 @@ Drivers/GPIO_module/%.o Drivers/GPIO_module/%.su Drivers/GPIO_module/%.cyclo: ..
 clean: clean-Drivers-2f-GPIO_module
 
 clean-Drivers-2f-GPIO_module:
-	-$(RM) ./Drivers/GPIO_module/user_led.cyclo ./Drivers/GPIO_module/user_led.d ./Drivers/GPIO_module/user_led.o ./Drivers/GPIO_module/user_led.su
+	-$(RM) ./Drivers/GPIO_module/user_button.cyclo ./Drivers/GPIO_module/user_button.d ./Drivers/GPIO_module/user_button.o ./Drivers/GPIO_module/user_button.su ./Drivers/GPIO_module/user_led.cyclo ./Drivers/GPIO_module/user_led.d ./Drivers/GPIO_module/user_led.o ./Drivers/GPIO_module/user_led.su
 
 .PHONY: clean-Drivers-2f-GPIO_module
 
