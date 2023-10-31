@@ -1,4 +1,0 @@
-../Drivers/GPIO_module/user_led.c:10:6:user_led_init	1
-../Drivers/GPIO_module/user_led.c:54:6:user_led_on	1
-../Drivers/GPIO_module/user_led.c:60:6:user_led_off	1
-../Drivers/GPIO_module/user_led.c:65:6:user_led_toggle	1
